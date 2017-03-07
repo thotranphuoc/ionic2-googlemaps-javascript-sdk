@@ -2,9 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-import { TabsPage } from '../pages/tabs/tabs';
+
+import { MapPage }            from '../pages/map/map';
+import { MapShapesPage }      from '../pages/map-shapes/map-shapes';
+import { MapIconPage }        from '../pages/map-icon/map-icon';
+import { MapIconPopoverPage } from '../pages/map-icon-popover/map-icon-popover'
+import { TabsPage }           from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = TabsPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +24,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 },
+      { title: 'Map', component: MapPage },
+      { title: 'Circle', component: MapShapesPage },
+      { title: 'Map + Icon', component: MapIconPage },
+      { title: 'Map Icon PopOver', component: MapIconPopoverPage },
       { title: 'Tabs', component: TabsPage }
     ];
 
