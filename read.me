@@ -1,7 +1,15 @@
+-----------------------------------------
+| STEP TO CONFIGURE GMAPS Javascript SDK |
+-----------------------------------------
+
 1. set up ionic 2 project
 2. add follow script into index.html
+  <!-- The bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWK9AbG7Q3DtDm6u0bBEZBkEsv0Zd2Wkw"></script>
+
 3. declare var google
 4. Or install typings: npm install @types/google-maps --save
 5. edit scss file
 
-key: AIzaSyBnM_Zi9CAd87OB4diODMvUWeEh0BpK1Bc
+Note: page that load map should not be the rootPage. Otherwise error google not defined 
